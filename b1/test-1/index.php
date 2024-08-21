@@ -21,7 +21,6 @@
         .calculate {
             background-color: #fff;
             padding: 5% 3%;
-            margin: 0 50px;
             border-radius: 3px;
             box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
         }
@@ -83,31 +82,6 @@
                     <button type="submit" class="btn-item">Tính</button>
                 </div>
             </form>
-        </div>
-
-
-        <div  class="test calculate">
-                <h2 class="test-title">Kiểm tra số</h2>
-                <form action="result.php" method="POST">
-
-                    <div class="calculate-item">
-                            <span class="calculate-item__note">Chọn phương thức: </span>
-                            <ul class="calulate-item__list">
-                                <li class="calulate-item__list-child">
-                                    <label><input type="radio" name="operation2" value="chan-le" checked> Chẵn lẻ</label>
-                                    <label><input type="radio" name="operation2" value="ngto"> Số nguyên tố</label>
-                                </li>
-                            </ul>
-                    </div>
-                     <div class="calulate-input">
-                        <span class="calulate-input__note">Số kiểm tra:</span>
-                        <input type="text" class="calulate-input__item" name="number" required>
-                    </div>
-                    <div class="calulate-btn">
-                            <button type="submit" class="btn-item">Kiểm tra</button>
-                    </div>
-                </form>
-                
         </div>
     </div>
 </body>
