@@ -10,6 +10,12 @@
             font-size: 12px;
             display: none;
         }
+        .form{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
