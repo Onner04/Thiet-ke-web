@@ -51,30 +51,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Document</title>
 </head>
 <body>
-<div class="app">
-    <div class="form">
-        <p> Tên : <?php echo isset($_SESSION['name1']) ? htmlspecialchars($_SESSION['name1']) : ''; ?></p>
-        <p> Họ : <?php echo isset($_SESSION['name2']) ? htmlspecialchars($_SESSION['name2']) : ''; ?></p>
-        <p> Email : <?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : ''; ?></p>
-        <p> ID : <?php echo isset($_SESSION['invoice_id']) ? htmlspecialchars($_SESSION['invoice_id']) : ''; ?></p>
-        <p> Danh mục : <?php echo isset($_SESSION['categories_arr']) ? htmlspecialchars($_SESSION['categories_arr']) : ''; ?></p>
+    <div class="app">
+        <div class="form">
+            <p> Tên : <?php echo isset($_SESSION['name1']) ? htmlspecialchars($_SESSION['name1']) : ''; ?></p>
+            <p> Họ : <?php echo isset($_SESSION['name2']) ? htmlspecialchars($_SESSION['name2']) : ''; ?></p>
+            <p> Email : <?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : ''; ?></p>
+            <p> ID : <?php echo isset($_SESSION['invoice_id']) ? htmlspecialchars($_SESSION['invoice_id']) : ''; ?></p>
+            <p> Danh mục : <?php echo isset($_SESSION['categories_arr']) ? htmlspecialchars($_SESSION['categories_arr']) : ''; ?></p>
 
-        <h2>Uploaded Files</h2>
-        <?php if (isset($_SESSION['uploaded_files']) && !empty($_SESSION['uploaded_files'])): ?>
-            <div class="uploaded-files">
-                <h3>File đã tải lên:</h3>
-                <ul>
-                    <?php foreach ($_SESSION['uploaded_files'] as $file): ?>
-                        <li><a href="<?php echo $file; ?>" target="_blank"><?php echo basename($file); ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        <?php else: ?>
-            <p>Không có file nào được tải lên.</p>
-        <?php endif; ?>
-        <p> Additional infomation : <?php  echo isset($_SESSION['description']) ? htmlspecialchars($_SESSION['description']) : '';  ?></p>
+            <h2>Uploaded Files</h2>
+            <?php if (isset($_SESSION['uploaded_files']) && !empty($_SESSION['uploaded_files'])): ?>
+                <div class="uploaded-files">
+                    <h3>File đã tải lên:</h3>
+                    <ul>
+                        <?php foreach ($_SESSION['uploaded_files'] as $file): ?>
+                            <li><a href="<?php echo $file; ?>" target="_blank"><?php echo basename($file); ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php else: ?>
+                <p>Không có file nào được tải lên.</p>
+            <?php endif; ?>
+            <p> Additional infomation : <?php  echo isset($_SESSION['description']) ? htmlspecialchars($_SESSION['description']) : '';  ?></p>
 
+        </div>
     </div>
-</div>
 </body>
 </html>
